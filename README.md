@@ -1,4 +1,4 @@
-# Waveguide Effective Index Prediction (WGeffectiveIndex)
+# Waveguide Effective Index Prediction (Isabella Morgan & Ergun Simsek)
 
 Machine learning surrogate models for predicting the effective refractive index (`n_eff`) of Si₃N₄/SiO₂ rectangular waveguides, trained on FEM (finite element method) mode-solver data — as a fast alternative to running a full mode solver for every new waveguide geometry.
 
@@ -43,8 +43,3 @@ requests
 ## Usage
 
 Run the notebook (`WG_n_eff_prediction.ipynb`) top to bottom, or adapt the individual model-training cells. Each model section reports **Test RMSE** and **Test R²**, plus a predicted-vs-true scatter plot against the `y = x` ideal line.
-
-## Status / Next Steps
-
-- Extending the surrogate to predict **chromatic dispersion polynomial coefficients** directly as a function of `(width, height)`, avoiding the need to re-evaluate `n_eff` densely in wavelength at inference time.
-- Evaluating a fixed-wavelength-grid dispersion target (instead of raw polynomial coefficients) to improve numerical conditioning during NN training.
