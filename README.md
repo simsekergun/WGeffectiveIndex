@@ -1,4 +1,5 @@
-# Waveguide Effective Index Prediction (Isabella Morgan & Ergun Simsek)
+# Waveguide Effective Index Prediction 
+## Authors: Isabella Morgan & Ergun Simsek
 
 Machine learning surrogate models for predicting the effective refractive index (`n_eff`) of Si₃N₄/SiO₂ rectangular waveguides, trained on FEM (finite element method) mode-solver data — as a fast alternative to running a full mode solver for every new waveguide geometry.
 
