@@ -30,7 +30,10 @@ The trained surrogate can then be used to compute derived quantities — such as
 2. **Baseline: Linear Regression** — establishes a lower bound on achievable accuracy.
 3. **Fully Connected Neural Network (PyTorch)** — a `SiLU`-activated FCNN with input/output standardization (`StandardScaler`), early stopping on a held-out validation split, and `ReduceLROnPlateau` learning-rate scheduling. This is the primary surrogate model.
 4. **Support Vector Regression (RBF kernel)** — an alternative surrogate, hyperparameters selected via grid search (`GridSearchCV`).
-5. **Downstream analysis** — the trained surrogate is used to predict `n_eff(λ)` on a dense wavelength grid, smooth it with a polynomial fit, and compute chromatic dispersion `D(λ)` (in ps/nm/km) for arbitrary waveguide geometries.
+
+On Google CoLab, using a GPU, FCNN implementation is faster.
+In terms of accuracy, there is not much difference between FCNN and SVM.
+
 
 ## Requirements
 numpy
